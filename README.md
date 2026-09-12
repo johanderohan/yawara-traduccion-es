@@ -8,7 +8,7 @@ Se distribuye únicamente un **parche xdelta**. Necesitas tu propia copia del ju
 
 ## Descarga y estado
 
-**[v0.3-dev — Versión de desarrollo](https://github.com/johanderohan/yawara-traduccion-es/releases/tag/v0.3-dev)** · [Todas las descargas](https://github.com/johanderohan/yawara-traduccion-es/releases)
+**[v0.4-dev — Versión de desarrollo](https://github.com/johanderohan/yawara-traduccion-es/releases/tag/v0.4-dev)** · [Todas las descargas](https://github.com/johanderohan/yawara-traduccion-es/releases)
 
 **La traducción todavía no está terminada.** Esta publicación permite probar el trabajo actual y está marcada como *prerelease*.
 
@@ -19,26 +19,26 @@ Se distribuye únicamente un **parche xdelta**. Necesitas tu propia copia del ju
 | Créditos | 87 referencias integradas, incluidas líneas vacías; un nombre conserva su escritura japonesa por lectura no resuelta |
 | Subtítulos adicionales | 185 llamadas para 184 recursos; borradores experimentales pendientes de revisión de audio, escena y ritmo |
 | Criterios lingüísticos | Castellano de España, biblia de traducción y glosario de 153 entradas utilizados durante el trabajo |
-| Texto dibujado en imágenes | Inventario parcial; localización pendiente |
+| Texto dibujado en imágenes | Título, Nueva partida/Continuar, graduación, rótulos de Jigoro, periódico de felicitación, bibliotecas y aeropuerto traducidos; otros textos ambientales se conservan cuando la escena o el castellano los explican |
 | Steam Deck física | Sin probar |
 
 Las voces originales se mantienen en japonés. Quedan **13 lecturas vocales dudosas** sin integrar, además de recursos cuya habla o asociación todavía no está confirmada. Los recuentos anteriores no equivalen a un porcentaje global del juego.
 
 ## Comprobaciones
 
-- 35 pruebas automatizadas correctas y 350 sectores modificados con integridad EDC/ECC verificada.
-- Aplicación del parche sobre la pista original y comparación exacta con la imagen preparada.
-- Arranque desde cero con Beetle PCE Fast en macOS ARM64.
-- Recorrido automático con entradas normales de mando por los 19 bloques principales, hasta los créditos y el regreso al guion de presentación; 2392 transiciones de menú verificadas.
-- Corregido un bloqueo al abrir el subtítulo 1319: una espera nativa antes de la voz permite terminar la transición de la escena sin eliminar texto.
+- Parche aplicado a la pista original y resultado idéntico, byte a byte, a la imagen probada; 498 sectores modificados con cabeceras y EDC/ECC verificados.
+- Recorrido desde cero de la imagen publicada: 1.087.395 fotogramas, 2.407 aceptaciones de menú, capítulos principales hasta el final y regreso al guion inicial, sin error nativo registrado.
+- Rótulos del aeropuerto comprobados en una partida nueva, guardado y carga dentro del juego y continuación a escenas posteriores.
+- Guardar, cerrar RetroArch, abrir de nuevo, cargar la primera ranura y avanzar se comprobó en macOS con una construcción anterior identificada. No certifica todas las ranuras ni Steam Deck.
+- Se mantiene la corrección del bloqueo anterior al subtítulo 1319 y el audio original del CD.
 
-Este recorrido no sustituye la revisión audiovisual completa ni comprueba todas las ramas alternativas. También quedan pendientes el guardado persistente desde el frontend y las pruebas en una Steam Deck real.
+**No es una versión definitiva:** quedan ramas de contenido sin acreditar y revisión audiovisual de los subtítulos experimentales. El recorrido principal y las pruebas gráficas no sustituyen la revisión completa. Los textos japoneses de fondo conservados por contexto no se contabilizan como traducidos.
 
 ## Cómo aplicar el parche
 
 El parche modifica **solo la pista 2** de la edición japonesa con siete archivos BIN y un CUE. No se aplica al CUE, a una imagen CHD ni a una copia ya traducida.
 
-1. Descarga `yawara-es-0.3-dev.xdelta` de **[Releases](https://github.com/johanderohan/yawara-traduccion-es/releases/tag/v0.3-dev)**.
+1. Descarga `yawara-es-0.4-dev.xdelta` de **[Releases](https://github.com/johanderohan/yawara-traduccion-es/releases/tag/v0.4-dev)**.
 2. Comprueba la pista original antes de aplicar el parche:
 
    | Dato | Valor |
@@ -53,14 +53,14 @@ El parche modifica **solo la pista 2** de la edición japonesa con siete archivo
 4. Aplica el parche con xdelta3. Desde la carpeta que contiene la pista 2 original, el parche y `Juego-ES`:
 
    ```sh
-   xdelta3 -d -s 'YaWaRa! A Fashionable Judo Girl! (Japan) (Track 2).bin' 'yawara-es-0.3-dev.xdelta' 'Juego-ES/YaWaRa! A Fashionable Judo Girl! (Japan) (Track 2).bin'
+   xdelta3 -d -s 'YaWaRa! A Fashionable Judo Girl! (Japan) (Track 2).bin' 'yawara-es-0.4-dev.xdelta' 'Juego-ES/YaWaRa! A Fashionable Judo Girl! (Japan) (Track 2).bin'
    ```
 
    El archivo de salida es la nueva pista 2, dentro de `Juego-ES`, con el nombre que espera el CUE.
 5. Comprueba el SHA-256 de la pista resultante:
 
    ```text
-   fc5bda9ee4fdfbe7c92a5d220af4cd6b268a7212dfdb51ae65afe8ea7e254561
+   2f660930bcd5ddae9b6839e1617c39c4e0dcb72f8e920822d9776a3f9791a375
    ```
 
 6. Abre el **CUE de `Juego-ES`** en tu emulador de PC Engine CD. La carpeta debe contener las siete pistas; abrir un BIN aislado puede dejar fuera las pistas de audio.
@@ -70,7 +70,7 @@ Para copiar el juego a Steam Deck, conserva la carpeta completa y configura por 
 SHA-256 del parche:
 
 ```text
-07c776bcf1196ad2b40e02e8cf4c67da9be3d8d6529dd029baba92ec5d88424f
+74bdf1c56af7956318b25dcb7933b2af053cf263c209380ebc864bae5e9f6934
 ```
 
 ## Aviso
