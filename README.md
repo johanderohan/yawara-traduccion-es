@@ -20,7 +20,6 @@ Se distribuye únicamente un **parche xdelta**. Necesitas tu propia copia del ju
 | Subtítulos adicionales | 185 llamadas para 184 recursos; borradores experimentales pendientes de revisión de audio, escena y ritmo |
 | Criterios lingüísticos | Castellano de España, biblia de traducción y glosario de 153 entradas utilizados durante el trabajo |
 | Texto dibujado en imágenes | Título, Nueva partida/Continuar, graduación, rótulos de Jigoro, periódico de felicitación, bibliotecas y aeropuerto traducidos; otros textos ambientales se conservan cuando la escena o el castellano los explican |
-| Steam Deck física | Sin probar |
 
 Las voces originales se mantienen en japonés. Quedan **13 lecturas vocales dudosas** sin integrar, además de recursos cuya habla o asociación todavía no está confirmada. Los recuentos anteriores no equivalen a un porcentaje global del juego.
 
@@ -29,7 +28,7 @@ Las voces originales se mantienen en japonés. Quedan **13 lecturas vocales dudo
 - Parche aplicado a la pista original y resultado idéntico, byte a byte, a la imagen probada; 498 sectores modificados con cabeceras y EDC/ECC verificados.
 - Recorrido desde cero de la imagen publicada: 1.087.395 fotogramas, 2.407 aceptaciones de menú, capítulos principales hasta el final y regreso al guion inicial, sin error nativo registrado.
 - Rótulos del aeropuerto comprobados en una partida nueva, guardado y carga dentro del juego y continuación a escenas posteriores.
-- Guardar, cerrar RetroArch, abrir de nuevo, cargar la primera ranura y avanzar se comprobó en macOS con una construcción anterior identificada. No certifica todas las ranuras ni Steam Deck.
+- Guardar, cerrar RetroArch, abrir de nuevo, cargar la primera ranura y avanzar se comprobó en macOS con una construcción anterior identificada. No certifica todas las ranuras.
 - Se mantiene la corrección del bloqueo anterior al subtítulo 1319 y el audio original del CD.
 
 **No es una versión definitiva:** quedan ramas de contenido sin acreditar y revisión audiovisual de los subtítulos experimentales. El recorrido principal y las pruebas gráficas no sustituyen la revisión completa. Los textos japoneses de fondo conservados por contexto no se contabilizan como traducidos.
@@ -65,7 +64,7 @@ El parche modifica **solo la pista 2** de la edición japonesa con siete archivo
 
 6. Abre el **CUE de `Juego-ES`** en tu emulador de PC Engine CD. La carpeta debe contener las siete pistas; abrir un BIN aislado puede dejar fuera las pistas de audio.
 
-Para copiar el juego a Steam Deck, conserva la carpeta completa y configura por separado tu BIOS `syscard3.pce`. Arranca desde cero, sin cargar estados rápidos de versiones anteriores. Esta publicación no certifica funcionamiento en Steam Deck.
+Para copiar el juego a otro dispositivo, conserva la carpeta completa y configura por separado tu BIOS `syscard3.pce`. Arranca desde cero, sin cargar estados rápidos de versiones anteriores.
 
 SHA-256 del parche:
 
