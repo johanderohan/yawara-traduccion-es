@@ -2,6 +2,8 @@
 
 [![Invítame a un café en Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/johanderohan)
 
+Ficha del proyecto, capturas y más traducciones al castellano en **[Parches en Castellano](https://parchesencastellano.com/traducciones/pc-engine-cd/yawara)**.
+
 Traducción al **español de España** de *YaWaRa! A Fashionable Judo Girl!* para **PC Engine CD**, a partir de la edición japonesa.
 
 Se distribuye únicamente un **parche xdelta**. Necesitas tu propia copia del juego; no se incluyen imágenes de disco ni BIOS.
